@@ -1,0 +1,49 @@
+{
+    "name": "ricardoboss/laravel-user-settings",
+    "description": "Simple user settings facade for Laravel.",
+    "homepage": "https://github.com/ricardoboss/laravel-user-settings",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grimthorr",
+            "email": "phil@hughesbox.co.uk",
+            "homepage": "http://hughesbox.co.uk"
+        },
+        {
+            "name": "Ricardo Boss",
+            "email": "contact@ricardoboss.de",
+            "homepage": "https://ricardoboss.de"
+        },
+        {
+            "name": "Rezkonline",
+            "email": "support@rezkonline.com",
+            "homepage": "https://rezkonline.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0|^9.0",
+        "illuminate/config": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rezkonline\\LaravelUserSettings\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rezkonline\\LaravelUserSettings\\ServiceProvider"
+            ],
+            "aliases": {
+                "Setting": "Rezkonline\\LaravelUserSettings\\Facade"
+            }
+        }
+    }
+}
