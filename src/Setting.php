@@ -88,7 +88,7 @@ class Setting {
         $this->default_constraint_value = config('laravel-user-settings.default_constraint_value');
 
         if(is_null($this->default_constraint_value)) {
-            $this->default_constraint_value = (\Auth::check() ? \Auth::id() : null);
+            $this->default_constraint_value = auth()->id();
         }
     }
 
@@ -225,7 +225,7 @@ class Setting {
             ->whereRaw($constraint_query)
             ->value($this->column);
 
-        $this->settings[$constraint_value] = json_decode($json, true);
+        $this->settings[$constraint_value] = $json ? json_decode($json, true) : [];
 
         $this->dirty[$constraint_value] = false;
         $this->loaded[$constraint_value] = true;

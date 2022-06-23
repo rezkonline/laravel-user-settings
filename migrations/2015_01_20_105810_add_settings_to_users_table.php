@@ -22,9 +22,9 @@ class AddSettingsToUsersTable extends Migration {
 				DB::connection()->getPdo()->getAttribute(PDO::ATTR_DRIVER_NAME) == 'mysql' &&
 				version_compare(DB::connection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION), '5.7.8', 'ge')
 			) {
-				$table->json('settings')->default('[]');
+				$table->json('settings')->nullable();
 			} else {
-				$table->text('settings');
+				$table->text('settings')->nullable();
 			}
 		});
 	}

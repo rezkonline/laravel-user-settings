@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     /**
      * The table that contains the settings column.
      */
@@ -25,5 +25,4 @@ return array(
      * Custom constraint query to add to all clauses, set to null to use constraint_key and constraint_value above.
      */
     'custom_constraint' => null,
-
-);
+];
