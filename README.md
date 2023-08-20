@@ -5,7 +5,7 @@ Simple user settings facade for Laravel. Settings are stored as JSON in a single
 ## Installation
 
 ```bash
-composer require ricardoboss/laravel-user-settings
+composer require rezkonline/laravel-user-settings
 ```
 
 ### Publish config file
